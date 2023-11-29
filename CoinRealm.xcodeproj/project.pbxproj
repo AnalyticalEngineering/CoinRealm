@@ -14,6 +14,28 @@
 		1298A14E2B16A05B001B0C23 /* CoinRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A14D2B16A05B001B0C23 /* CoinRealmTests.swift */; };
 		1298A1582B16A05B001B0C23 /* CoinRealmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1572B16A05B001B0C23 /* CoinRealmUITests.swift */; };
 		1298A15A2B16A05B001B0C23 /* CoinRealmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1592B16A05B001B0C23 /* CoinRealmUITestsLaunchTests.swift */; };
+		1298A16A2B16A2CC001B0C23 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1298A1692B16A2CC001B0C23 /* Realm */; };
+		1298A16C2B16A2CC001B0C23 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1298A16B2B16A2CC001B0C23 /* RealmSwift */; };
+		1298A16E2B16A4E7001B0C23 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A16D2B16A4E7001B0C23 /* CategoryModel.swift */; };
+		1298A1702B16A5CD001B0C23 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A16F2B16A5CD001B0C23 /* TransactionModel.swift */; };
+		1298A1722B16A617001B0C23 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1712B16A617001B0C23 /* CurrencyModel.swift */; };
+		1298A1742B16A63E001B0C23 /* DefaultCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1732B16A63E001B0C23 /* DefaultCategories.swift */; };
+		1298A1772B16A737001B0C23 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1762B16A737001B0C23 /* Colors.swift */; };
+		1298A17A2B16A7AE001B0C23 /* ExtensionFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1792B16A7AE001B0C23 /* ExtensionFloat.swift */; };
+		1298A17C2B16A7D4001B0C23 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A17B2B16A7D4001B0C23 /* Icons.swift */; };
+		1298A17F2B16A823001B0C23 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A17E2B16A823001B0C23 /* HapticManager.swift */; };
+		1298A1822B16A900001B0C23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1812B16A900001B0C23 /* HomeView.swift */; };
+		1298A1842B16A90D001B0C23 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1832B16A90D001B0C23 /* WelcomeView.swift */; };
+		1298A1872B16A99F001B0C23 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1862B16A99F001B0C23 /* AppViewModel.swift */; };
+		1298A1892B16A9F1001B0C23 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1882B16A9F1001B0C23 /* CategoryViewModel.swift */; };
+		1298A18B2B16AB47001B0C23 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A18A2B16AB47001B0C23 /* TransactionViewModel.swift */; };
+		1298A18D2B16AE9B001B0C23 /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A18C2B16AE9B001B0C23 /* AddTransactionView.swift */; };
+		1298A18F2B16AEE9001B0C23 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A18E2B16AEE9001B0C23 /* BalanceView.swift */; };
+		1298A1912B16B057001B0C23 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1902B16B057001B0C23 /* SettingsView.swift */; };
+		1298A1932B16B083001B0C23 /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1922B16B083001B0C23 /* CategoryItemView.swift */; };
+		1298A1952B16B0D4001B0C23 /* TransactionCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1942B16B0D4001B0C23 /* TransactionCategoryView.swift */; };
+		1298A1972B16B109001B0C23 /* PreviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1962B16B109001B0C23 /* PreviewCardView.swift */; };
+		1298A1992B16B181001B0C23 /* PickerCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298A1982B16B181001B0C23 /* PickerCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +67,26 @@
 		1298A1532B16A05B001B0C23 /* CoinRealmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinRealmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1298A1572B16A05B001B0C23 /* CoinRealmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRealmUITests.swift; sourceTree = "<group>"; };
 		1298A1592B16A05B001B0C23 /* CoinRealmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRealmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1298A16D2B16A4E7001B0C23 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		1298A16F2B16A5CD001B0C23 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		1298A1712B16A617001B0C23 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		1298A1732B16A63E001B0C23 /* DefaultCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCategories.swift; sourceTree = "<group>"; };
+		1298A1762B16A737001B0C23 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1298A1792B16A7AE001B0C23 /* ExtensionFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFloat.swift; sourceTree = "<group>"; };
+		1298A17B2B16A7D4001B0C23 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		1298A17E2B16A823001B0C23 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		1298A1812B16A900001B0C23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1298A1832B16A90D001B0C23 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		1298A1862B16A99F001B0C23 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		1298A1882B16A9F1001B0C23 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		1298A18A2B16AB47001B0C23 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		1298A18C2B16AE9B001B0C23 /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+		1298A18E2B16AEE9001B0C23 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		1298A1902B16B057001B0C23 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1298A1922B16B083001B0C23 /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
+		1298A1942B16B0D4001B0C23 /* TransactionCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCategoryView.swift; sourceTree = "<group>"; };
+		1298A1962B16B109001B0C23 /* PreviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCardView.swift; sourceTree = "<group>"; };
+		1298A1982B16B181001B0C23 /* PickerCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1298A16C2B16A2CC001B0C23 /* RealmSwift in Frameworks */,
+				1298A16A2B16A2CC001B0C23 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +139,13 @@
 		1298A13A2B16A059001B0C23 /* CoinRealm */ = {
 			isa = PBXGroup;
 			children = (
-				1298A13B2B16A059001B0C23 /* CoinRealmApp.swift */,
-				1298A13D2B16A059001B0C23 /* ContentView.swift */,
+				1298A1802B16A8BC001B0C23 /* App */,
+				1298A17D2B16A803001B0C23 /* Managers */,
+				1298A1782B16A79C001B0C23 /* Extensions */,
+				1298A1752B16A690001B0C23 /* Resources */,
+				1298A1852B16A979001B0C23 /* ViewModels */,
+				1298A1672B16A161001B0C23 /* Models */,
+				1298A1662B16A156001B0C23 /* Views */,
 				1298A13F2B16A05A001B0C23 /* Assets.xcassets */,
 				1298A1412B16A05A001B0C23 /* CoinRealm.entitlements */,
 				1298A1422B16A05A001B0C23 /* Preview Content */,
@@ -129,6 +178,77 @@
 			path = CoinRealmUITests;
 			sourceTree = "<group>";
 		};
+		1298A1662B16A156001B0C23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1298A13D2B16A059001B0C23 /* ContentView.swift */,
+				1298A1812B16A900001B0C23 /* HomeView.swift */,
+				1298A1832B16A90D001B0C23 /* WelcomeView.swift */,
+				1298A18C2B16AE9B001B0C23 /* AddTransactionView.swift */,
+				1298A18E2B16AEE9001B0C23 /* BalanceView.swift */,
+				1298A1902B16B057001B0C23 /* SettingsView.swift */,
+				1298A1922B16B083001B0C23 /* CategoryItemView.swift */,
+				1298A1942B16B0D4001B0C23 /* TransactionCategoryView.swift */,
+				1298A1962B16B109001B0C23 /* PreviewCardView.swift */,
+				1298A1982B16B181001B0C23 /* PickerCategoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1298A1672B16A161001B0C23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1298A16D2B16A4E7001B0C23 /* CategoryModel.swift */,
+				1298A16F2B16A5CD001B0C23 /* TransactionModel.swift */,
+				1298A1712B16A617001B0C23 /* CurrencyModel.swift */,
+				1298A1732B16A63E001B0C23 /* DefaultCategories.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1298A1752B16A690001B0C23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1298A1762B16A737001B0C23 /* Colors.swift */,
+				1298A17B2B16A7D4001B0C23 /* Icons.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1298A1782B16A79C001B0C23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1298A1792B16A7AE001B0C23 /* ExtensionFloat.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1298A17D2B16A803001B0C23 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1298A17E2B16A823001B0C23 /* HapticManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1298A1802B16A8BC001B0C23 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1298A13B2B16A059001B0C23 /* CoinRealmApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1298A1852B16A979001B0C23 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1298A1862B16A99F001B0C23 /* AppViewModel.swift */,
+				1298A1882B16A9F1001B0C23 /* CategoryViewModel.swift */,
+				1298A18A2B16AB47001B0C23 /* TransactionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +265,10 @@
 			dependencies = (
 			);
 			name = CoinRealm;
+			packageProductDependencies = (
+				1298A1692B16A2CC001B0C23 /* Realm */,
+				1298A16B2B16A2CC001B0C23 /* RealmSwift */,
+			);
 			productName = CoinRealm;
 			productReference = 1298A1382B16A059001B0C23 /* CoinRealm.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +341,9 @@
 				Base,
 			);
 			mainGroup = 1298A12F2B16A059001B0C23;
+			packageReferences = (
+				1298A1682B16A2CC001B0C23 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 1298A1392B16A059001B0C23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +386,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1298A1892B16A9F1001B0C23 /* CategoryViewModel.swift in Sources */,
+				1298A1722B16A617001B0C23 /* CurrencyModel.swift in Sources */,
+				1298A1702B16A5CD001B0C23 /* TransactionModel.swift in Sources */,
+				1298A1952B16B0D4001B0C23 /* TransactionCategoryView.swift in Sources */,
+				1298A1912B16B057001B0C23 /* SettingsView.swift in Sources */,
+				1298A17A2B16A7AE001B0C23 /* ExtensionFloat.swift in Sources */,
+				1298A1872B16A99F001B0C23 /* AppViewModel.swift in Sources */,
+				1298A1972B16B109001B0C23 /* PreviewCardView.swift in Sources */,
 				1298A13E2B16A059001B0C23 /* ContentView.swift in Sources */,
+				1298A1772B16A737001B0C23 /* Colors.swift in Sources */,
+				1298A18F2B16AEE9001B0C23 /* BalanceView.swift in Sources */,
+				1298A1822B16A900001B0C23 /* HomeView.swift in Sources */,
+				1298A1992B16B181001B0C23 /* PickerCategoryView.swift in Sources */,
+				1298A17C2B16A7D4001B0C23 /* Icons.swift in Sources */,
+				1298A1842B16A90D001B0C23 /* WelcomeView.swift in Sources */,
+				1298A17F2B16A823001B0C23 /* HapticManager.swift in Sources */,
+				1298A1742B16A63E001B0C23 /* DefaultCategories.swift in Sources */,
+				1298A16E2B16A4E7001B0C23 /* CategoryModel.swift in Sources */,
+				1298A18D2B16AE9B001B0C23 /* AddTransactionView.swift in Sources */,
+				1298A1932B16B083001B0C23 /* CategoryItemView.swift in Sources */,
 				1298A13C2B16A059001B0C23 /* CoinRealmApp.swift in Sources */,
+				1298A18B2B16AB47001B0C23 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +764,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1298A1682B16A2CC001B0C23 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1298A1692B16A2CC001B0C23 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1298A1682B16A2CC001B0C23 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		1298A16B2B16A2CC001B0C23 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1298A1682B16A2CC001B0C23 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1298A1302B16A059001B0C23 /* Project object */;
 }
