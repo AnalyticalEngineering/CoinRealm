@@ -22,10 +22,25 @@ struct WelcomeView: View {
                     VStack(alignment: .center) {
                         VStack {
                             Spacer(minLength: 100)
-                            Image("fiscavis")
-                                .resizable()
-                                .frame(width: 250, height: 100)
-                            Spacer(minLength: 20)
+                            HStack{
+                                Text("Atomic")
+                                    .fontDesign(.serif)
+                                    .font(.system(size: 24))
+                                    .foregroundStyle(Color("colorBalanceText"))
+                                    .fontWeight(.semibold)
+                                Image("prologo")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 50, height: 50)
+                                Text("iBudget")
+                                    .fontDesign(.serif)
+                                    .font(.system(size:24))
+                                    .foregroundStyle(Color("colorBalanceText"))
+                                    .fontWeight(.semibold)
+                            }
+                               
+                           
+                            Spacer(minLength: 50)
                            
 //                                .foregroundColor(.gray).bold()
 //                                .font(.largeTitle)

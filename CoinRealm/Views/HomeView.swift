@@ -9,14 +9,15 @@
     import RealmSwift
 
 struct HomeView: View {
+    //MARK:   PROPERTIES
     @EnvironmentObject var appVM: AppViewModel
     @EnvironmentObject var categoryVM: CategoryViewModel
     @EnvironmentObject var transactionVM: TransactionViewModel
     @ObservedResults(Category.self) var categories
-    
+    @State private var showSideMenu: Bool = false
     @State private var showAddTransaction: Bool = false
     @State private var selectedCategoryType: CategoryType = .expense
-    
+    //Adaptive  Grid size
     private let adaptive =
     [
         GridItem(.adaptive(minimum: 165))
@@ -27,6 +28,7 @@ struct HomeView: View {
         
         NavigationStack {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom))  {
+                //MARK:  LAZY GRID - BALANACE SCORE CARDS
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: adaptive  ){
                         
@@ -42,7 +44,7 @@ struct HomeView: View {
                     .padding(.horizontal)
                     .padding(.top)
                     
-                    //picker
+                    //MARK:  CATEGORY TYPE PICKER (EXPENSE/INCOME)
                     Picker("Type:", selection: $selectedCategoryType) {
                         ForEach(CategoryType.allCases, id: \.self) { type in
                             Text(type.localizedName())
@@ -80,45 +82,66 @@ struct HomeView: View {
             .cornerRadius(10)
             .padding(.horizontal, 15)
             .padding(.bottom, 100)
-        }
-        HStack {
-            Button {
-                HapticManager.notification(type: .success)
-                showAddTransaction.toggle()
-            } label: {
-                ZStack {
-                    Circle()
-                        .frame(width: 55, height: 55)
-                        .foregroundColor(Color("colorBalanceText"))
-                    Image(systemName: "plus")
-                        .foregroundColor(Color("colorBG"))
-                        .font(.system(size: 30))
+            //    MARK:  TOOL BAR - SIDE MENU AND ADD BUDGET/CATEGORY
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        HapticManager.notification(type: .success)
+                    } label: {
+                        NavigationLink(destination: SettingsView(), label: {
+                            Button {
+                                HapticManager.notification(type: .success)
+                                showAddTransaction.toggle()
+                            } label: {
+                                HStack{
+                                    Text("Add Expense")
+                                        .fontDesign(.serif)
+                                        .font(.system(size:16))
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(Color("colorBalanceText"))
+                                    ZStack {
+                                        Circle()
+                                            .frame(width: 30,  height:30)
+                                            .foregroundColor(Color("colorBalanceText"))
+                                        Image(systemName: "plus")
+                                            .foregroundColor(Color("colorBG"))
+                                            .fontWeight(.semibold)
+                                            .font(.system(size: 13))
+                                    }
+                                }
+                            }
+                            .padding(.horizontal)
+                        })
+                    }
                 }
             }
-        }
-        .padding(.all, 25)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    HapticManager.notification(type: .success)
-                } label: {
-                    NavigationLink(destination: SettingsView(), label: {
-                        HStack {
-                            Text("Settings")
-                        }
-                    })
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack{
+                        Text("Atomic")
+                            .fontDesign(.serif)
+                            .font(.system(size: 16))
+                            .foregroundStyle(Color("colorBalanceText"))
+                            .fontWeight(.semibold)
+                        Image("prologo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 27, height: 27)
+                        Text("iBudget")
+                            .fontDesign(.serif)
+                            .font(.system(size:16))
+                            .foregroundStyle(Color("colorBalanceText"))
+                            .fontWeight(.semibold)
+                    }
                 }
             }
-            ToolbarItem(placement: .navigationBarLeading) {
-                Text("Shekels")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("colorBalanceText"))
+            
+            .sheet(isPresented: $showAddTransaction) {
+                AddTransaction(selectedCategory: Category(), selectedType: selectedCategoryType)
             }
         }
     }
 }
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

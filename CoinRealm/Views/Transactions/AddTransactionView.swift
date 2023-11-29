@@ -8,7 +8,7 @@
 import SwiftUI
 import RealmSwift
 
-struct AddTransactionView: View {
+struct AddTransaction: View {
     @EnvironmentObject var appVM: AppViewModel
     @EnvironmentObject var transactionVM: TransactionViewModel
     @Environment(\.dismiss) var dismiss
@@ -113,7 +113,7 @@ struct AddTransactionView: View {
                         }
                     }
                     HStack {
-                        NavigationLink(destination: PickerCategoryView(), label: {
+                        NavigationLink(destination: PickerCategoryView( selected: $selectedCategory, selectedType: selectedType), label: {
                             if selectedCategory.name.isEmpty {
                                 HStack {
                                     Spacer()
@@ -141,7 +141,7 @@ struct AddTransactionView: View {
                                     Image(systemName: selectedCategory.icon)
                                         .font(.system(size: 15))
                                         .foregroundColor(.black)
-                                        .frame(width: 30, height: 30)
+                                        .frame(width: 25, height: 25)
                                         .background(Color(selectedCategory.color))
                                         .cornerRadius(7.5)
                                     Text(selectedCategory.name)
@@ -176,50 +176,58 @@ struct AddTransactionView: View {
             }
             .padding(.horizontal, 15)
             .padding(.top, 20)
+            .scrollDismissesKeyboard(.immediately)
+            .background(Color("colorBG"))
+            .navigationBarTitle("Addendum", displayMode: .inline)
             
-        }
-        .scrollDismissesKeyboard(.immediately)
-        .background(Color("colorBG"))
-        .navigationBarTitle("Addendum", displayMode: .inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    HapticManager.notification(type: .success)
-                    dismiss()
-                } label: {
-                    Text("Cancel")
-                }
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    if amount == 0 {
-                        alertAmount = true
-                    } else if selectedCategory.name == "" {
-                        alertCategory = true
-                    } else if selectedType != selectedCategory.type {
-                        alertCategory = true
-                        selectedCategory = Category()
-                    } else {
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
                         HapticManager.notification(type: .success)
-                        transactionVM.saveTransaction(amount: amount, date: date, note: note, type: selectedType, category: selectedCategory)
                         dismiss()
+                    } label: {
+                        Text("Cancel")
+                            .fontDesign(.serif)
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color.red)
                     }
-                } label: {
-                    Text("Add")
                 }
-                .alert("Please select a category", isPresented: $alertCategory) {
-                    Button("Okay", role: .cancel) { }
-                }
-                .alert("Please enter amount", isPresented: $alertAmount) {
-                    Button("Okay", role: .cancel) { }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        if amount == 0 {
+                            alertAmount = true
+                        } else if selectedCategory.name == "" {
+                            alertCategory = true
+                        } else if selectedType != selectedCategory.type {
+                            alertCategory = true
+                            selectedCategory = Category()
+                        } else {
+                            HapticManager.notification(type: .success)
+                            transactionVM.saveTransaction(amount: amount, date: date, note: note, type: selectedType, category: selectedCategory)
+                            dismiss()
+                        }
+                    } label: {
+                        Text("Save")
+                            .fontDesign(.serif)
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color.green)
+                    }
+                    .alert("Please select a category", isPresented: $alertCategory) {
+                        Button("Okay", role: .cancel) { }
+                    }
+                    .alert("Please enter amount", isPresented: $alertAmount) {
+                        Button("Okay", role: .cancel) { }
+                    }
                 }
             }
         }
     }
-    }
-struct AddTransactionView_Previews: PreviewProvider {
+}
+struct AddTransaction_Previews: PreviewProvider {
     static var previews: some View {
-        AddTransactionView(selectedCategory: Category())
+        AddTransaction(selectedCategory: Category())
             .environmentObject(AppViewModel())
             .environmentObject(TransactionViewModel())
     }

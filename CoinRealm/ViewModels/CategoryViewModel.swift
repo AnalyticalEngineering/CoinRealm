@@ -44,7 +44,7 @@ final class CategoryViewModel: ObservableObject {
     //MARK:  SAVE BUDGET CATEGORIES
     func saveCategory(name: String, icon: String, color: String, type: CategoryType) {
         guard let realm = try? Realm() else {
-            print("Ошибка: Не удалось создать экземпляр Realm")
+            print("unable to save  category to core data ")
             return
         }
         let newCategory = Category()
@@ -56,11 +56,11 @@ final class CategoryViewModel: ObservableObject {
             try realm.write {
                 realm.add(newCategory)
             }
-            // отладочное сообщение
-            return print("Категория сохранена: \(newCategory)")
+        
+            return print("something : \(newCategory)")
         } catch {
-            // отладочное сообщение
-            return print("Ошибка сохранения категории: \(error)")
+          
+            return print("problems: \(error)")
         }
     }
     //MARK:  DELETE CATEGORIES
